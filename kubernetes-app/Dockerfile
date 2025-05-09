@@ -1,11 +1,7 @@
-# Dockerfile
-FROM python:3.11-slim
+FROM ubuntu:22.04
 
-CMD ["python", "-c", "\
-import time;\
-start = time.time();\
-primes = [2];\
-for num in range(3, 100000):\
-  if all(num % p != 0 for p in primes): primes.append(num);\
-print(f'Found {len(primes)} primes in {time.time() - start:.2f} seconds');\
-"]
+RUN apt-get update && \
+    apt-get install -y sysbench && \
+    rm -rf /var/lib/apt/lists/*
+
+CMD ["sysbench", "cpu", "--threads=2", "run"]
