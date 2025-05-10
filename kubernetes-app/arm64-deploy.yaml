@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sysbench-arm64
+  labels:
+    app: sysbench-arm64
+spec:
+  nodeSelector:
+    kubernetes.io/arch: arm64
+  restartPolicy: Never
+  containers:
+    - name: sysbench
+      image: docker pull nomansadiq11/cpu-benchmark:v1.0.0
+      imagePullPolicy: Always
