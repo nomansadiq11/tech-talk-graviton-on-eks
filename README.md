@@ -6,7 +6,7 @@ This demo showcases the performance difference between **x86_64** and **ARM64 (G
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -25,7 +25,7 @@ This demo showcases the performance difference between **x86_64** and **ARM64 (G
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
